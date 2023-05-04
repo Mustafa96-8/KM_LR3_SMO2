@@ -197,9 +197,9 @@ for i in range(len(A)):
 
 print(table3)
 
-table1 = PrettyTable(['Событие', 'Время события', 'В очереди'])
+table1 = PrettyTable(['Событие', 'Время события'])
 for i in range(len(TimeEvent)):
-    table1.add_row([Event[i], round(TimeEvent[i], 3), N[i]])
+    table1.add_row([Event[i], round(TimeEvent[i], 3)])
     if Event[i][0] == 'У' :
         index = int((Event[i].split(':'))[1]) -1
         W.insert(index,TimeEvent[i] - (A[index] + V[index]))
